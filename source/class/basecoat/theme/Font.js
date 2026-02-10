@@ -1,18 +1,15 @@
-/* ************************************************************************
+qx.Theme.define("basecoat.theme.Font", {
+  extend: qx.theme.indigo.Font,
 
-   Copyright: 2026 
+  fonts: {
+    default: {
+      size: 14,
+      family: ["Outfit", "sans-serif"],
+    },
 
-   License: MIT license
-
-   Authors: 
-
-************************************************************************ */
-
-qx.Theme.define("basecoat.theme.Font",
-{
-  extend : qx.theme.indigo.Font,
-
-  fonts :
-  {
-  }
+    monospace: {
+      size: 13,
+      family: ["monospace"],
+    },
+  },
 });

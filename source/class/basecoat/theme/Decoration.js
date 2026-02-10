@@ -1,18 +1,26 @@
-/* ************************************************************************
+qx.Theme.define("basecoat.theme.Decoration", {
+  extend: qx.theme.indigo.Decoration,
 
-   Copyright: 2026 
+  decorations: {
+    "bc-radius": {
+      style: { radius: 8 },
+    },
 
-   License: MIT license
+    "bc-shadow-sm": {
+      style: {
+        shadowBlurRadius: 3,
+        shadowColor: "rgba(0,0,0,0.17)",
+      },
+    },
 
-   Authors: 
-
-************************************************************************ */
-
-qx.Theme.define("basecoat.theme.Decoration",
-{
-  extend : qx.theme.indigo.Decoration,
-
-  decorations :
-  {
-  }
+    "bc-card": {
+      style: {
+        radius: 8,
+        width: 1,
+        color: "bc-border",
+        shadowBlurRadius: 3,
+        shadowColor: "rgba(0,0,0,0.17)",
+      },
+    },
+  },
 });
