@@ -1,18 +1,5 @@
-/* ************************************************************************
+qx.Theme.define("basecoat.theme.Appearance", {
+  extend: qx.theme.indigo.Appearance,
 
-   Copyright: 2026 
-
-   License: MIT license
-
-   Authors: 
-
-************************************************************************ */
-
-qx.Theme.define("basecoat.theme.Appearance",
-{
-  extend : qx.theme.indigo.Appearance,
-
-  appearances :
-  {
-  }
+  appearances: {},
 });

@@ -13,11 +13,8 @@
  *
  * @asset(basecoat/*)
  */
-qx.Class.define("basecoat.Application",
-{
-  extend : qx.application.Standalone,
-
-
+qx.Class.define("basecoat.Application", {
+  extend: qx.application.Standalone,
 
   /*
   *****************************************************************************
@@ -25,22 +22,19 @@ qx.Class.define("basecoat.Application",
   *****************************************************************************
   */
 
-  members :
-  {
+  members: {
     /**
      * This method contains the initial application code and gets called
      * during startup of the application
      *
      * @lint ignoreDeprecated(alert)
      */
-    main()
-    {
+    main() {
       // Call super class
       super.main();
 
       // Enable logging in debug variant
-      if (qx.core.Environment.get("qx.debug"))
-      {
+      if (qx.core.Environment.get("qx.debug")) {
         // support native logging capabilities, e.g. Firebug for Firefox
         qx.log.appender.Native;
         // support additional cross-browser console. Press F7 to toggle visibility
@@ -54,19 +48,32 @@ qx.Class.define("basecoat.Application",
       */
 
       // Create a button
-      const button1 = new qx.ui.form.Button("Click me", "basecoat/test.png");
+      const label = new qx.ui.basic.Label("Hello World");
+
+      const textField = new qx.ui.form.TextField();
+      textField.setPlaceholder("Type something...");
+
+      const btn = new qx.ui.form.Button("Click me");
 
       // Document is the application root
       const doc = this.getRoot();
+      const vbox = new qx.ui.container.Composite(
+        new qx.ui.layout.VBox(10).set({
+          alignX: "center",
+        }),
+      );
 
       // Add button to document at fixed coordinates
-      doc.add(button1, {left: 100, top: 50});
+      vbox.add(label);
+      vbox.add(textField);
+      vbox.add(btn);
+      doc.add(vbox, { left: 100, top: 50 });
 
       // Add an event listener
-      button1.addListener("execute", function() {
+      btn.addListener("execute", function () {
         /* eslint no-alert: "off" */
         alert("Hello World!");
       });
-    }
-  }
+    },
+  },
 });

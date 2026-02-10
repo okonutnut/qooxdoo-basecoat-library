@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "target": "es6",
+        "preserveConstEnums": true,
+        "outFile": "source/class/basecoat/Application.js"
+    },
+    "include": ["source/**/*"]
+}

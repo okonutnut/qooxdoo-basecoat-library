@@ -7,12 +7,3 @@ qx.Theme.define("basecoat.theme.Theme", {
     appearance: basecoat.theme.Appearance,
   },
 });
-
-qx.Theme.define("basecoat.theme.DarkTheme", {
-  meta: {
-    color: basecoat.theme.DarkColor,
-    decoration: basecoat.theme.Decoration,
-    appearance: basecoat.theme.Appearance,
-    font: basecoat.theme.Font,
-  },
-});
