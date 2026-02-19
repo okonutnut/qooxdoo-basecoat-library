@@ -2,4 +2,5 @@
 /compiled
 /qx_packages
 .package-cache.json
-/tailwind_builds/node_modules
+/tailwind-builds
+node_modules/
