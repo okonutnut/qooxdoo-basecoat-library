@@ -1,0 +1,1 @@
+pnpm dlx @tailwindcss/cli -i ./input.css -o ./dist/daisy.css --minify
